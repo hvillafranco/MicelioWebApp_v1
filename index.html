@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍄 Modelo MICELIO - Visualización Fractal Interactiva</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- D3.js para visualización -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Principal -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <h1>🍄 MODELO MICELIO</h1>
+                <p>Visualización Fractal-Holográfica Interactiva</p>
+            </div>
+            <nav class="main-nav">
+                <button class="nav-btn active" data-view="overview">
+                    <i class="fas fa-home"></i> Resumen
+                </button>
+                <button class="nav-btn" data-view="fractals">
+                    <i class="fas fa-atom"></i> Fractales
+                </button>
+                <button class="nav-btn" data-view="network">
+                    <i class="fas fa-project-diagram"></i> Red
+                </button>
+                <button class="nav-btn" data-view="flows">
+                    <i class="fas fa-stream"></i> Flujos
+                </button>
+                <button class="nav-btn" data-view="maps">
+                    <i class="fas fa-map"></i> Mapas
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Panel de Control -->
+    <div class="control-panel">
+        <div class="controls-section">
+            <div class="control-group">
+                <label for="zoom-control">Zoom</label>
+                <input type="range" id="zoom-control" min="0.1" max="3" step="0.1" value="1">
+                <span id="zoom-value">1.0x</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="filter-dimension">Dimensión</label>
+                <select id="filter-dimension">
+                    <option value="all">Todas</option>
+                    <option value="ser">SER</option>
+                    <option value="tener">TENER</option>
+                    <option value="hacer">HACER</option>
+                    <option value="estar">ESTAR</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="animation-speed">Animación</label>
+                <input type="range" id="animation-speed" min="0" max="5" step="1" value="2">
+                <span id="speed-value">Normal</span>
+            </div>
+            
+            <div class="control-group">
+                <button id="reset-view" class="control-btn">
+                    <i class="fas fa-refresh"></i> Reset
+                </button>
+                <button id="fullscreen-btn" class="control-btn">
+                    <i class="fas fa-expand"></i> Pantalla Completa
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <!-- Vista de Resumen -->
+        <section id="overview-view" class="view-section active">
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="card-header">
+                        <h3>🧬 Núcleo Fractal</h3>
+                        <span class="card-badge">Genoma</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Centro holográfico del modelo donde reside toda la información sistémica.</p>
+                        <div class="card-stats">
+                            <span>9 Protocolos META</span>
+                            <span>6 Ejes Teóricos</span>
+                        </div>
+                    </div>
+                    <button class="card-action" data-navigate="fractals">Explorar →</button>
+                </div>
+
+                <div class="overview-card">
+                    <div class="card-header">
+                        <h3>🪆 Plan Matryoshka</h3>
+                        <span class="card-badge">Estructura</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Muñecas anidadas que organizan la realidad en niveles recursivos.</p>
+                        <div class="card-stats">
+                            <span>4 Muñecas</span>
+                            <span>∞ Niveles</span>
+                        </div>
+                    </div>
+                    <button class="card-action" data-navigate="fractals">Explorar →</button>
+                </div>
+
+                <div class="overview-card">
+                    <div class="card-header">
+                        <h3>🌐 Red Miceliar</h3>
+                        <span class="card-badge">Conexiones</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Red de filamentos, rizomas y nodos que interconectan todo el sistema.</p>
+                        <div class="card-stats">
+                            <span>4 Filamentos</span>
+                            <span>∞ Conexiones</span>
+                        </div>
+                    </div>
+                    <button class="card-action" data-navigate="network">Explorar →</button>
+                </div>
+
+                <div class="overview-card">
+                    <div class="card-header">
+                        <h3>🔄 Ruta Transformativa</h3>
+                        <span class="card-badge">Proceso</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Flujo desde la voluntad inicial hasta el bienestar integral.</p>
+                        <div class="card-stats">
+                            <span>6 Etapas</span>
+                            <span>∞ Bucles</span>
+                        </div>
+                    </div>
+                    <button class="card-action" data-navigate="flows">Explorar →</button>
+                </div>
+            </div>
+
+            <div class="overview-hero">
+                <div class="hero-content">
+                    <h2>🌟 Modelo MICELIO</h2>
+                    <p class="hero-subtitle">Un sistema fractal-holográfico para la transformación social</p>
+                    <p class="hero-description">
+                        Cada elemento contiene la información del todo. Cada nivel replica los patrones del sistema completo. 
+                        Navega a través de múltiples perspectivas de una realidad integrada.
+                    </p>
+                    <div class="hero-features">
+                        <span class="feature-tag">🔬 Fractal</span>
+                        <span class="feature-tag">💠 Holográfico</span>
+                        <span class="feature-tag">🌱 Evolutivo</span>
+                        <span class="feature-tag">🤝 Colaborativo</span>
+                    </div>
+                </div>
+                <div class="hero-visual" id="hero-animation">
+                    <!-- Animación será generada por JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Vista de Fractales -->
+        <section id="fractals-view" class="view-section">
+            <div class="section-header">
+                <h2>🔬 Estructuras Fractales</h2>
+                <p>Núcleos auto-replicantes y muñecas anidadas</p>
+            </div>
+            
+            <div class="fractal-tabs">
+                <button class="tab-btn active" data-fractal="genome">Genoma Miceliar</button>
+                <button class="tab-btn" data-fractal="matryoshka">Plan Matryoshka</button>
+            </div>
+            
+            <div class="visualization-container">
+                <div id="fractal-visualization"></div>
+                <div class="fractal-info">
+                    <div id="fractal-details"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vista de Red -->
+        <section id="network-view" class="view-section">
+            <div class="section-header">
+                <h2>🌐 Red Miceliar</h2>
+                <p>Interconexiones sistémicas y flujos holográficos</p>
+            </div>
+            
+            <div class="network-legend">
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #E1BEE7"></span>
+                    <span>SER - Filamento Identitario</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #BBDEFB"></span>
+                    <span>TENER - Filamento Recursos</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #C8E6C9"></span>
+                    <span>HACER - Filamento Acción</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #FFE0B2"></span>
+                    <span>ESTAR - Filamento Contextual</span>
+                </div>
+            </div>
+            
+            <div class="visualization-container">
+                <div id="network-visualization"></div>
+                <div class="network-info">
+                    <div id="node-details">
+                        <h4>Información del Nodo</h4>
+                        <p>Haz clic en cualquier nodo para ver sus detalles</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vista de Flujos -->
+        <section id="flows-view" class="view-section">
+            <div class="section-header">
+                <h2>🌊 Flujos Transformativos</h2>
+                <p>Dinámicas de cambio y rutas de evolución</p>
+            </div>
+            
+            <div class="flow-controls">
+                <button class="flow-btn active" data-flow="transformation">Ruta Transformativa</button>
+                <button class="flow-btn" data-flow="feedback">Bucles Retroalimentación</button>
+                <button class="flow-btn" data-flow="emergence">Emergencia Sistémica</button>
+            </div>
+            
+            <div class="visualization-container">
+                <div id="flow-visualization"></div>
+                <div class="flow-timeline">
+                    <div id="timeline-details"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vista de Mapas -->
+        <section id="maps-view" class="view-section">
+            <div class="section-header">
+                <h2>🗺️ Mapas Conceptuales</h2>
+                <p>Cartografías del espacio existencial</p>
+            </div>
+            
+            <div class="map-selector">
+                <button class="map-btn active" data-map="ontological">Mapa Ontológico</button>
+                <button class="map-btn" data-map="multilevel">Arquitectura Multinivel</button>
+            </div>
+            
+            <div class="visualization-container">
+                <div id="map-visualization"></div>
+                <div class="map-navigator">
+                    <div id="map-compass"></div>
+                    <div id="map-details"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>🍄 Modelo MICELIO</h4>
+                <p>Sistema fractal-holográfico para la transformación social</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#fractals">Fractales</a></li>
+                    <li><a href="#network">Red Miceliar</a></li>
+                    <li><a href="#flows">Flujos</a></li>
+                    <li><a href="#maps">Mapas</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="#documentation">Documentación</a></li>
+                    <li><a href="#methodology">Metodología</a></li>
+                    <li><a href="#research">Investigación</a></li>
+                    <li><a href="#community">Comunidad</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Modelo MICELIO. Sistema de conocimiento abierto y colaborativo.</p>
+        </div>
+    </footer>
+
+    <!-- Overlay para detalles -->
+    <div id="detail-overlay" class="overlay hidden">
+        <div class="overlay-content">
+            <button class="overlay-close">&times;</button>
+            <div id="overlay-body"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="micelio-data.js"></script>
+    <script src="fractal-viewer.js"></script>
+    
+    <script>
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🍄 Modelo MICELIO - Iniciando visualización fractal...');
+            
+            // Inicializar visualizador
+            if (window.FractalViewer) {
+                window.micelioApp = new FractalViewer();
+                console.log('✅ Aplicación MICELIO inicializada correctamente');
+            } else {
+                console.error('❌ Error: FractalViewer no encontrado');
+            }
+        });
+    </script>
+</body>
+</html>
