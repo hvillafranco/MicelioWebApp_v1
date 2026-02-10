@@ -6,10 +6,14 @@
 
 ## 🤖 ¿DIFERENCIAS ENTRE CODEX Y CLAUDE OPUS?
 
-### 📍 **RESPUESTA DIRECTA AQUÍ:**
+### 📍 **RESPUESTA DIRECTA AQUÍ (Sin necesidad de VSCode):**
 
-👉 **[CLIC AQUÍ para la respuesta corta y directa](./RESPUESTA_DIRECTA_CODEX_VS_CLAUDE.md)**  
-👉 **[CLIC AQUÍ para la comparación completa y detallada](./COMPARACION_CODEX_CLAUDE_OPUS.md)**
+🎯 **[VER ÍNDICE DE RESPUESTAS](./INDICE.md)** ← **EMPIEZA AQUÍ**
+
+O elige tu nivel:
+- 🚀 **[Respuesta Ultra-Simple (5 min)](./RESPUESTA_AQUI.md)** ← Lectura más rápida
+- 🎯 **[Respuesta con Ejemplos (15 min)](./RESPUESTA_DIRECTA_CODEX_VS_CLAUDE.md)** ← Recomendado
+- 📚 **[Comparación Completa (30 min)](./COMPARACION_CODEX_CLAUDE_OPUS.md)** ← Todo el detalle
 
 ### **Resumen Ultra-Rápido:**
 
