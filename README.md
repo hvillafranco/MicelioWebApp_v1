@@ -2,6 +2,32 @@
 
 > **Aplicación web interactiva para explorar el Modelo MICELIO a través de visualizaciones fractales, redes holográficas y flujos transformativos**
 
+---
+
+## 🤖 ¿DIFERENCIAS ENTRE CODEX Y CLAUDE OPUS?
+
+### 📍 **RESPUESTA DIRECTA AQUÍ (Sin necesidad de VSCode):**
+
+🎯 **[VER ÍNDICE DE RESPUESTAS](./INDICE.md)** ← **EMPIEZA AQUÍ**
+
+O elige tu nivel:
+- 🚀 **[Respuesta Ultra-Simple (5 min)](./RESPUESTA_AQUI.md)** ← Lectura más rápida
+- 🎯 **[Respuesta con Ejemplos (15 min)](./RESPUESTA_DIRECTA_CODEX_VS_CLAUDE.md)** ← Recomendado
+- 📚 **[Comparación Completa (30 min)](./COMPARACION_CODEX_CLAUDE_OPUS.md)** ← Todo el detalle
+
+### **Resumen Ultra-Rápido:**
+
+| Dónde lo usas | Qué puede hacer | Para qué sirve |
+|---------------|-----------------|----------------|
+| **Claude Opus AQUÍ** (GitHub Copilot Workspace) | ✅ Edita archivos automáticamente<br>✅ Ejecuta comandos<br>✅ Ve todo el repositorio<br>✅ Hace commits | 🎯 Trabajar en proyectos completos<br>🧠 Análisis profundo<br>📐 Arquitectura compleja |
+| **Codex AQUÍ** (GitHub Copilot en editor) | ✅ Autocompletado instantáneo<br>✅ Sugerencias mientras escribes<br>⚡ Súper rápido | ⌨️ Codificar día a día<br>🚀 Funciones simples<br>⚡ Velocidad |
+| **Claude en claude.ai** | 💬 Solo chat<br>📎 Puedes subir PDFs<br>❌ No edita tu código | 📚 Explicaciones<br>📄 Analizar documentos<br>🤔 Discutir ideas |
+| **VSCode normal** | ❌ Sin IA integrada<br>✏️ Editor manual | ✏️ Editar código manualmente<br>⚠️ Sin asistencia IA |
+
+**💡 Si VSCode "no sirve"**: Usa GitHub directamente en el navegador para ver estos archivos, o usa GitHub Copilot Workspace.
+
+---
+
 ## 🌟 Características Principales
 
 ### **🔬 Visualización Fractal**
